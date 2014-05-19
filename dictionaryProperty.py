@@ -52,7 +52,7 @@ class DictionaryProperty(ndb.StructuredProperty):
     
         class BrandStats(ndb.Model):
             brandName = ndb.StringProperty()
-            numberOfClients = DictionaryProperty(int)
+            numberOfClients = DictionaryProperty()
         
         stats = BrandStats(numberOfClients={'US':4})
         stats.numberOfClients = {'US':7}
